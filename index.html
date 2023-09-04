@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Number</title>
+</head>
+<!-- styling -->
+<style>
+    body {
+        /* background-color: aqua; */
+        position: relative;
+    }
+
+    img {
+        width: 100%;
+        height: 100vh;
+        /* opacity: 0.7; */
+    }
+
+    #position {
+        width: 50%;
+        text-align: center;
+        /* opacity: 0.7; */
+        height: 200px;
+        /* opacity: 0.5; */
+        position: absolute;
+        top: 0%;
+        left: 35%;
+        color: white;
+    }
+
+    #country,
+    #number {
+        font-size: 20px;
+        color: white;
+    }
+</style>
+
+<body>
+    <img id="pic" src="assests/1.jpg" alt="flag">
+    <div id="position">
+        <h1>Search Your Country Phone Code</h1>
+        <p>Country Code</p>
+        <p id="country">23</p>
+        <br>
+        <p>Phone Number</p>
+        <p id="number">23</p>
+    </div>
+
+    <!-- JavaScript Code  -->
+
+    <script>
+
+        // Assigning Variable
+        var code = prompt("Enter country code of", "+92 , +90 ,+974");
+        var number = prompt("Enter your Last 10 Digit Of Phone Number", code + "-XXXXXXXXXX");
+
+        // if and else if 
+        if (code === '+92') {
+            document.getElementById('country').innerText = code;
+            document.getElementById('number').innerText = code + number;
+            document.getElementById('pic').src = "assests/1.jpg";
+        }
+        else if (code === '+90') {
+            document.getElementById('country').innerText = code;
+            document.getElementById('number').innerText = code + number;
+            document.getElementById('pic').src = "assests/2.jpg";
+        }
+        else if (code === '+974') {
+            document.getElementById('country').innerText = code;
+            document.getElementById('number').innerText = code + number;
+            document.getElementById('pic').src = "assests/3.jpg";
+        }
+
+    </script>
+</body>
+
+</html>
